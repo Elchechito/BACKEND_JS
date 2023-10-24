@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: black;
+}
+
+.reloj{
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/img/80282419-a293a400-8711-11ea-81c7-1c44e2980db2.png);
+    background-size: cover;
+    border: 1rem solid rgb(226, 27, 76);
+    border-radius: 50vh;
+    box-shadow: inset 0px 0px 50px 5px rgb(172, 8, 158);
+}
+
+.reloj::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgb(0, 89, 255);
+    border-radius: 50vh;
+    z-index: 10000;
+}
+
+.hora{
+    width: 150px;
+    height: 190px;
+}
+
+.minuto{
+    width: 190px;
+    height: 190px;
+}
+
+.segundo{
+    width: 250px;
+    height: 250px;
+}
+
+.hora::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 90px;
+    background-color: beige;
+    z-index: 10;
+    border-radius: 50vh;
+}
+
+.minuto::before{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 130px;
+    background-color: rgb(255, 255, 0);
+    z-index: 11;
+    border-radius: 50vh;
+}
+
+.segundo::before{
+    content: '';
+    position: absolute;
+    width: 1.8px;
+    height: 150px;
+    background-color: rgb(30, 255, 0);
+    z-index: 12;
+    border-radius: 50vh;
+}
+
+.hora, .minuto, .segundo{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50vh;
+}
